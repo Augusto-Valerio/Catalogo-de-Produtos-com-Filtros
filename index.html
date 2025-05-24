@@ -5,11 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <link rel="stylesheet" href="style.css">
-  <title>Catálogo</title>
+  <title>Game Store</title>
 </head>
 
 <body>
   
+<h1>Game Store</h1>
+<h2>Catalogo de produtos</h2>
+
+<button id="listarTodos">Listar Todos os Produtos</button>
+<form id="filtroForm">
+  <label for="categoria">Categoria:</label>
+  <select id="categoria">
+    <option value="todas">Todas</option>
+    <option value="consoles">Consoles</option>
+    <option value="jogos">Jogos</option>
+    <option value="acessorios">Acessórios</option>
+  </select>
+
+  <label for="disponibilidade">
+    Somente Disponíveis
+    <input type="checkbox" id="disponibilidade">
+  </label>
+
+  <label for="ordenacao">Ordenar por Preço:</label>
+  <select id="ordenacao">
+    <option value="nenhum">Nenhum</option>
+    <option value="crescente">Crescente</option>
+    <option value="decrescente">Decrescente</option>
+  </select>
+
+  <button type="button" id="filtrar">Filtrar</button>
+</form>
+
 </body>
 <script src="app.js"></script>
 </html>
