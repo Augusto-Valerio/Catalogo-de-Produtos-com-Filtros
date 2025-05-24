@@ -9,10 +9,6 @@
     height: auto;
   }
 }
-.produto:hover {
-  background-color: #f0f0f0;
-  border: 2px solid #000;
-}
 
 #container {
   display: grid;

@@ -26,8 +26,17 @@ function listarProdutos(lista) {
       <p>${produto.disponibilidade ? "Disponível" : "Indisponível"}</p>`;
     container.append(div);
 
+    div.addEventListener("mouseover", () =>{
+      div.style.backgroundColor = "#f0f0f0";
+      div.style.border = "2px solid #000"
     });
-  };
+
+    div.addEventListener("mouseout", () =>{
+      div.style.backgroundColor = "";
+      div.style.border = "";
+    });
+  });
+};
 
 const listarTodos = document.querySelector("#listarTodos");
 listarTodos.addEventListener("click", () => listarProdutos(produtos));
