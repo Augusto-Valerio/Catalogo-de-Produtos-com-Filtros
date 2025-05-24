@@ -35,12 +35,20 @@ const botao = document.querySelector("#filtrar");
 botao.addEventListener("click", () => {
   const categoria = document.getElementById("categoria").value;
   const somenteDisponiveis = document.getElementById("disponibilidade").checked;
+  const ordenacao = document.getElementById("ordenacao").value;
 
   const produtosFiltrados = produtos.filter((produto) => {
   const verificarCategoria = categoria === "todas" || produto.categoria === categoria;
   const verificarDisponibilidade = !somenteDisponiveis || produto.disponibilidade === somenteDisponiveis;
   return verificarCategoria && verificarDisponibilidade;
   });
+
+
+  if (ordenacao === "crescente") {
+    produtosFiltrados.sort((a, b) => a.preco - b.preco);
+  } else if (ordenacao === "decrescente") {
+    produtosFiltrados.sort((a, b) => b.preco - a.preco);
+  }
 
   listarProdutos(produtosFiltrados);
 });
