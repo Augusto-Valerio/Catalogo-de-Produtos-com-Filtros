@@ -10,3 +10,20 @@ const produtos = [
   { nome: "Controle sem fio Xbox", preco: 500, categoria: "acessorios", disponibilidade: true },
   { nome: "Red Dead Redemptiom 2", preco: 350, categoria: "jogos", disponibilidade: true },
 ];
+
+function listarProdutos(lista) {
+    const container = document.getElementById("container");
+    container.innerHTML = "";
+  
+    lista.forEach((produto) => {
+      const div = document.createElement("div");
+      div.classList.add("produto");
+      div.innerHTML = `
+        <h3>${produto.nome}</h3>
+        <p>Preço: R$ ${produto.preco.toFixed(2)}</p>
+        <p>Categoria: ${produto.categoria}</p>
+        <p>${produto.disponibilidade ? "Disponível" : "Indisponível"}</p>`
+      container.append(div);
+
+      });
+    };
