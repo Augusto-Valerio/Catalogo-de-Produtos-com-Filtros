@@ -14,6 +14,12 @@ const produtos = [
 function listarProdutos(lista) {
   const container = document.getElementById("container");
   container.innerHTML = "";
+  container.classList.add("containerProdutos");
+  container.style.display = "grid";
+  container.style.gridTemplateColumns = "repeat(2, 1fr)";
+  container.style.margin = "auto";
+  container.style.textAlign = "center";
+  container.style.width = "50%";
 
   lista.forEach((produto) => {
     const div = document.createElement("div");
