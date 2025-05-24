@@ -22,8 +22,11 @@ function listarProdutos(lista) {
         <h3>${produto.nome}</h3>
         <p>Preço: R$ ${produto.preco.toFixed(2)}</p>
         <p>Categoria: ${produto.categoria}</p>
-        <p>${produto.disponibilidade ? "Disponível" : "Indisponível"}</p>`
+        <p>${produto.disponibilidade ? "Disponível" : "Indisponível"}</p>`;
       container.append(div);
 
       });
     };
+
+const listarTodos = document.querySelector("#listarTodos");
+listarTodos.addEventListener("click", () => listarProdutos(produtos));
