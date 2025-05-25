@@ -19,7 +19,7 @@ function listarProdutos(lista) {
   container.style.gridTemplateColumns = "repeat(3, 1fr)";
   container.style.margin = "auto";
   container.style.textAlign = "center";
-  container.style.width = "50%";
+  container.style.padding = "100px";
 
   lista.forEach((produto) => {
     const div = document.createElement("div");
@@ -35,6 +35,7 @@ function listarProdutos(lista) {
     div.addEventListener("mouseover", () =>{
       div.style.backgroundColor = "#f0f0f0";
       div.style.border = "2px solid #000"
+      div.style.cursor = "pointer";
     });
 
     div.addEventListener("mouseout", () =>{
