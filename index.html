@@ -9,35 +9,45 @@
 </head>
 
 <body>
-  
-  <h1>Game Store</h1>
-  <h2>Catálogo de Produtos</h2>
+  <header>
+    <h1>Game Store</h1>
+    <h2>Catálogo de Produtos</h2>
+  </header>
 
-  <button id="listarTodos">Listar Todos os Produtos</button>
+  
 
   <form id="filtroForm">
-    <label for="categoria">Categoria:</label>
-    <select id="categoria">
-      <option value="todas">Todas</option>
-      <option value="consoles">Consoles</option>
-      <option value="jogos">Jogos</option>
-      <option value="acessorios">Acessórios</option>
-    </select>
 
-    <label for="disponibilidade">
+    <div id="categoriaConjunto">
+      <label>Categoria:</label>
+      <select id="categoria">
+        <option value="todas">Todas</option>
+        <option value="consoles">Consoles</option>
+        <option value="jogos">Jogos</option>
+        <option value="acessorios">Acessórios</option>
+      </select>
+    </div>
+
+    <label id="somenteDispnivel">
       Somente Disponíveis
       <input type="checkbox" id="disponibilidade">
     </label>
 
-    <label for="ordenacao">Ordenar por Preço:</label>
-    <select id="ordenacao">
-      <option value="nenhum">Nenhum</option>
-      <option value="crescente">Crescente</option>
-      <option value="decrescente">Decrescente</option>
-    </select>
+    <div id="ordenarPreco">
+      <label>Ordenar por Preço:</label>
+      <select id="ordenacao">
+        <option value="nenhum">Nenhum</option>
+        <option value="crescente">Crescente</option>
+        <option value="decrescente">Decrescente</option>
+      </select>
+    </div>
 
-    <button type="button" id="filtrar">Filtrar</button>
   </form>
+
+  <div id="buttons">
+    <button type="button" id="filtrar">Filtrar</button>
+    <button id="listarTodos">Listar Todos os Produtos</button>
+  </div>
 
   <div id="container"></div>
 </body>
