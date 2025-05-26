@@ -21,7 +21,7 @@ link do repositório: [Catálogo de Produtos/Game Store](https://github.com/Augu
 
 2. Fazer um Fork, criando uma cópia do repositório em suas contas do GitHub. A opção Fork fica acima da descrição do repositório.
    
-3. ([Link de acesso do site no GitHub pages:](https://augusto-valerio.github.io/Catalogo-de-Produtos-com-Filtros/))
+3. ([Link de acesso do site no GitHub pages:](https://augusto-valerio.github.io/GameStore-Catalogo-de-produtos/))
 
 ## Autores:
 - [Augusto Valerio](https://github.com/Augusto-Valerio).
